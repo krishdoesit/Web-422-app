@@ -33,7 +33,7 @@ app.get("/api/movies", (req, res) => {
         .then(movies => {
             res.status(200).json(movies);
         }).catch(err => {
-            res.status(400).json({ message: err });
+            res.status(400).json({ message: err.message });
         })
 });
 
